@@ -82,16 +82,16 @@
                                 <exclude reference="uEU-1v-9bW"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="9kA-Ik-BwP"/>
-                                <exclude reference="ad6-jL-ltk"/>
+                                <exclude reference="RCB-81-t5b"/>
                                 <exclude reference="WYh-Ab-Pjl"/>
                                 <exclude reference="wxa-yd-0xo"/>
+                                <exclude reference="V0T-vr-CaH"/>
                                 <exclude reference="5Rp-JR-fTu"/>
                                 <exclude reference="hmu-UY-7qx"/>
                                 <exclude reference="YVv-qn-AWQ"/>
                                 <exclude reference="Zqb-A4-tS9"/>
-                                <exclude reference="V0T-vr-CaH"/>
-                                <exclude reference="RCB-81-t5b"/>
+                                <exclude reference="9kA-Ik-BwP"/>
+                                <exclude reference="ad6-jL-ltk"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -103,16 +103,16 @@
                                 <include reference="uEU-1v-9bW"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="9kA-Ik-BwP"/>
-                                <include reference="ad6-jL-ltk"/>
+                                <include reference="RCB-81-t5b"/>
                                 <include reference="WYh-Ab-Pjl"/>
                                 <include reference="wxa-yd-0xo"/>
+                                <include reference="V0T-vr-CaH"/>
                                 <include reference="5Rp-JR-fTu"/>
                                 <include reference="hmu-UY-7qx"/>
                                 <include reference="YVv-qn-AWQ"/>
                                 <include reference="Zqb-A4-tS9"/>
-                                <include reference="V0T-vr-CaH"/>
-                                <include reference="RCB-81-t5b"/>
+                                <include reference="9kA-Ik-BwP"/>
+                                <include reference="ad6-jL-ltk"/>
                             </mask>
                         </variation>
                     </view>
