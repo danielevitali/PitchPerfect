@@ -82,4 +82,8 @@ class PlaySoundsViewController: UIViewController {
         
         audioPlayerNode.play()
     }
+    
+    override func viewDidDisappear(animated: Bool) {
+        try! NSFileManager.defaultManager().removeItemAtURL(recordedAudio.filePathUrl)
+    }
 }
