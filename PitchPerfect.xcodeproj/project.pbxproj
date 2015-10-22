@@ -16,7 +16,6 @@
 		A37A76221BCE3348003AE6A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A37A76201BCE3348003AE6A3 /* LaunchScreen.storyboard */; };
 		A37A762D1BCE3348003AE6A3 /* PitchPerfectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37A762C1BCE3348003AE6A3 /* PitchPerfectTests.swift */; };
 		A37A76381BCE3348003AE6A3 /* PitchPerfectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37A76371BCE3348003AE6A3 /* PitchPerfectUITests.swift */; };
-		A3A55EFA1BD1664100A71C8B /* movie_quote.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3A55EF91BD1664100A71C8B /* movie_quote.mp3 */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +51,6 @@
 		A37A76331BCE3348003AE6A3 /* PitchPerfectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PitchPerfectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A37A76371BCE3348003AE6A3 /* PitchPerfectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PitchPerfectUITests.swift; sourceTree = "<group>"; };
 		A37A76391BCE3348003AE6A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A3A55EF91BD1664100A71C8B /* movie_quote.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = movie_quote.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +101,6 @@
 		A37A76161BCE3348003AE6A3 /* PitchPerfect */ = {
 			isa = PBXGroup;
 			children = (
-				A3FE647B1BD9589300A0617E /* Assets */,
 				A3FE647A1BD9587A00A0617E /* Controllers */,
 				A3FE64791BD957FF00A0617E /* Models */,
 				A37A76171BCE3348003AE6A3 /* AppDelegate.swift */,
@@ -148,14 +145,6 @@
 				A358DB6C1BCECAAA003B4242 /* PlaySoundsViewController.swift */,
 			);
 			name = Controllers;
-			sourceTree = "<group>";
-		};
-		A3FE647B1BD9589300A0617E /* Assets */ = {
-			isa = PBXGroup;
-			children = (
-				A3A55EF91BD1664100A71C8B /* movie_quote.mp3 */,
-			);
-			name = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,7 +255,6 @@
 			files = (
 				A37A76221BCE3348003AE6A3 /* LaunchScreen.storyboard in Resources */,
 				A37A761F1BCE3348003AE6A3 /* Assets.xcassets in Resources */,
-				A3A55EFA1BD1664100A71C8B /* movie_quote.mp3 in Resources */,
 				A37A761D1BCE3348003AE6A3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
