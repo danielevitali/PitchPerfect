@@ -161,7 +161,7 @@
                             </button>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" red="0.32987618102322391" green="0.65914065517076226" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.93841164457419035" green="0.78298828426453293" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="RuQ-1Z-GRN" firstAttribute="top" secondItem="aKW-QZ-eDe" secondAttribute="bottom" constant="8" id="7aA-hb-s3O"/>
                             <constraint firstItem="aKW-QZ-eDe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8dw-1w-LPV"/>

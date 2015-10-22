@@ -103,12 +103,11 @@
 		A37A76161BCE3348003AE6A3 /* PitchPerfect */ = {
 			isa = PBXGroup;
 			children = (
-				A3A55EF91BD1664100A71C8B /* movie_quote.mp3 */,
-				A358DB701BCF93B5003B4242 /* RecordedAudio.swift */,
+				A3FE647B1BD9589300A0617E /* Assets */,
+				A3FE647A1BD9587A00A0617E /* Controllers */,
+				A3FE64791BD957FF00A0617E /* Models */,
 				A37A76171BCE3348003AE6A3 /* AppDelegate.swift */,
-				A37A76191BCE3348003AE6A3 /* RecordSoundsViewController.swift */,
 				A37A761B1BCE3348003AE6A3 /* Main.storyboard */,
-				A358DB6C1BCECAAA003B4242 /* PlaySoundsViewController.swift */,
 				A37A761E1BCE3348003AE6A3 /* Assets.xcassets */,
 				A37A76201BCE3348003AE6A3 /* LaunchScreen.storyboard */,
 				A37A76231BCE3348003AE6A3 /* Info.plist */,
@@ -132,6 +131,31 @@
 				A37A76391BCE3348003AE6A3 /* Info.plist */,
 			);
 			path = PitchPerfectUITests;
+			sourceTree = "<group>";
+		};
+		A3FE64791BD957FF00A0617E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A358DB701BCF93B5003B4242 /* RecordedAudio.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		A3FE647A1BD9587A00A0617E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A37A76191BCE3348003AE6A3 /* RecordSoundsViewController.swift */,
+				A358DB6C1BCECAAA003B4242 /* PlaySoundsViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		A3FE647B1BD9589300A0617E /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				A3A55EF91BD1664100A71C8B /* movie_quote.mp3 */,
+			);
+			name = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
