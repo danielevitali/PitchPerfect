@@ -24,7 +24,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
 
     @IBAction func recordAudio(sender: UIButton) {
         recordButton.enabled = false
-        recordingInProgress.hidden = false
+        recordingInProgress.text = "Recording..."
         stopButton.hidden = false
         
         let dirPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
@@ -59,7 +59,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     }
 
     @IBAction func stopRecording(sender: UIButton) {
-        recordingInProgress.hidden = true
+        recordingInProgress.text = "Tap to Record"
         stopButton.hidden = true
         recordButton.enabled = true
         

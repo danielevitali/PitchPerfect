@@ -11,62 +11,82 @@ import AVFoundation
 
 class PlaySoundsViewController: UIViewController {
 
-    let FAST_RATE: Float = 1.5
-    let NORMAL_RATE: Float = 1
-    let SLOW_RATE: Float = 0.5
-    let HIGH_PITCH: Float = 1000
-    let NORMAL_PITCH: Float = 0
-    let LOW_PITCH: Float = -1000
+    private let FAST_RATE: Float = 1.5
+    private let NORMAL_RATE: Float = 1
+    private let SLOW_RATE: Float = 0.5
+    private let HIGH_PITCH: Float = 1000
+    private let NORMAL_PITCH: Float = 0
+    private let LOW_PITCH: Float = -1000
     
     var recordedAudio: RecordedAudio!
     
-    var audioEngine: AVAudioEngine!
-    var audioFile: AVAudioFile!
+    private var audioEngine: AVAudioEngine!
+    private var audioPlayerNode: AVAudioPlayerNode!
+    private var audioFile: AVAudioFile!
+    
+    private var lastPlayType: PlayType!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         audioEngine = AVAudioEngine()
+        audioPlayerNode = AVAudioPlayerNode()
         audioFile = try! AVAudioFile(forReading: recordedAudio.filePathUrl)
     }
  
     @IBAction func playSlowAudio(sender: UIButton) {
-        playAudio(SLOW_RATE, pitch: NORMAL_PITCH)
+        handleButton(PlayType.Slow)
     }
     
     @IBAction func playFastAudio(sender: UIButton) {
-        playAudio(FAST_RATE, pitch: NORMAL_PITCH)
+        handleButton(PlayType.Fast)
     }
     
     @IBAction func playChipmunkAudio(sender: UIButton) {
-        playAudio(NORMAL_RATE, pitch: HIGH_PITCH)
+        handleButton(PlayType.Chipmunk)
     }
     
     @IBAction func playDarthWaderAudio(sender: UIButton) {
-        playAudio(NORMAL_RATE, pitch: LOW_PITCH)
+        handleButton(PlayType.DarthWader)
     }
     
     @IBAction func stop(sender: UIButton) {
+        lastPlayType = nil
         stop()
     }
     
-    func pause() {
-        audioEngine.pause()
+    private func handleButton(playType: PlayType) {
+        if(lastPlayType != playType) {
+            lastPlayType = playType
+            switch playType {
+            case PlayType.Fast:
+                playAudio(FAST_RATE, pitch: NORMAL_PITCH)
+            case PlayType.Slow:
+                playAudio(SLOW_RATE, pitch: NORMAL_PITCH)
+            case PlayType.Chipmunk:
+                playAudio(NORMAL_RATE, pitch: HIGH_PITCH)
+            case PlayType.DarthWader:
+                playAudio(NORMAL_RATE, pitch: LOW_PITCH)
+            }
+            return
+        }
+        
+        if(audioPlayerNode.playing) {
+            audioPlayerNode.pause()
+        } else {
+            audioPlayerNode.play()
+        }
     }
     
-    func resume() {
-        try! audioEngine.start()
-    }
-    
-    func stop() {
+    private func stop() {
         audioEngine.stop()
         audioEngine.reset()
     }
     
-    func playAudio(rate: Float, pitch: Float) {
+    private func playAudio(rate: Float, pitch: Float) {
         stop()
         
-        let audioPlayerNode = AVAudioPlayerNode()
+        audioPlayerNode = AVAudioPlayerNode()
         audioEngine.attachNode(audioPlayerNode)
         
         let audioUnitTimePitch = AVAudioUnitTimePitch()
