@@ -158,9 +158,6 @@
                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="130" y="458" width="141.5" height="20"/>
-                                </variation>
                             </label>
                         </subviews>
                         <animations/>

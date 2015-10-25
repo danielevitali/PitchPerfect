@@ -24,7 +24,7 @@ class PlaySoundsViewController: UIViewController {
     private var audioPlayerNode: AVAudioPlayerNode!
     private var audioFile: AVAudioFile!
     
-    private var lastPlayType: PlayType!
+    private var lastPlayType: PlayType?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -97,7 +97,9 @@ class PlaySoundsViewController: UIViewController {
         audioEngine.connect(audioPlayerNode, to: audioUnitTimePitch, format: nil)
         audioEngine.connect(audioUnitTimePitch, to: audioEngine.outputNode, format: nil)
         
-        audioPlayerNode.scheduleFile(audioFile, atTime: nil, completionHandler: nil)
+        audioPlayerNode.scheduleFile(audioFile, atTime: nil, completionHandler: { () -> Void in
+            self.lastPlayType = nil
+        })
         try! audioEngine.start()
         
         audioPlayerNode.play()
